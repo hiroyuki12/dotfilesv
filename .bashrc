@@ -1,0 +1,36 @@
+# .bashrc
+
+# User specific aliases and functions
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+#stty -ixon
+
+# unlimit stacksize for large aray in user mode
+#ulimit -s unlimited
+
+# set aliases
+alias ls='ls -F --color=auto'
+alias ll='ls -la --color=auto'
+alias la='ls -a --color=auto'
+alias eng='LANG=C LANGUAGE=C LC_ALL=C'
+
+alias sea='apt-cache search'
+alias a='sudo apt-get install'
+
+alias gd='git diff'
+alias gc='git commit'
+alias gp='git push'
+alias gpu='git pull'
+alias gs='git status'
+alias ga='git add'
+alias gl='git log'
+alias glp='git log -p'
+
+alias cls='clear'
+
+# user file-creation mask
+umask 022
