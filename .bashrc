@@ -18,8 +18,11 @@ alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
 alias eng='LANG=C LANGUAGE=C LC_ALL=C'
 
+alias d='cd /home/hiroyuki/Desktop'
 alias sea='apt-cache search'
 alias a='sudo apt-get install'
+alias bb='sudo apt-get update;sudo apt-get upgrade -y'
+alias le='leafpad'
 
 alias gd='git diff'
 alias gc='git commit'
