@@ -37,3 +37,5 @@ alias cls='clear'
 
 # user file-creation mask
 umask 022
+
+PS1="[\\[\\033[31m\]\u \W\[\033[0m\]]\\$ "
