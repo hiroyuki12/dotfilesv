@@ -34,6 +34,7 @@ alias gl='git log'
 alias glp='git log -p'
 
 alias cls='clear'
+alias dot='cd github/dotfilesv'
 
 # user file-creation mask
 umask 022
