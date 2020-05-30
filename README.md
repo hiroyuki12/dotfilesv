@@ -10,4 +10,6 @@ $ cd dotfilesv
 
 $ sh install.sh
 
+$ cd
 
+$ source .bashrc
