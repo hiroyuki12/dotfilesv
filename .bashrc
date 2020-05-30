@@ -42,3 +42,5 @@ alias xx='startxfce4'
 umask 022
 
 PS1="[\\[\\033[31m\]\u \W\[\033[0m\]]\\$ "
+
+setxkbmap -option apple:badmap -layout jp
