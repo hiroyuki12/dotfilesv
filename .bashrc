@@ -37,6 +37,7 @@ alias cls='clear'
 alias dot='cd github/dotfilesv'
 alias xx='startxfce4'
 alias ww='source .bashrc'
+alias mk='mkrpmspec'
 
 # user file-creation mask
 umask 022
