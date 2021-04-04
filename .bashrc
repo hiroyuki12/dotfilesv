@@ -17,8 +17,9 @@ alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
 alias eng='LANG=C LANGUAGE=C LC_ALL=C'
+alias brew='/home/linuxbrew/.linuxbrew/bin/brew'
 
-alias d='cd /home/hiroyuki/Desktop'
+alias d='cd /home/hiroyuki/github/dotfilesv'
 alias sea='apt-cache search'
 alias a='sudo apt-get install'
 alias bb='sudo apt-get update;sudo apt-get upgrade -y'
@@ -45,3 +46,6 @@ umask 022
 PS1="[\\[\\033[31m\]\u \W\[\033[0m\]]\\$ "
 
 setxkbmap -option apple:badmap -layout jp
+
+export PATH="$HOME/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/serverkit-0.7.0/bin:$PATH"
+export PATH="$HOME/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rebuild-0.6.1/bin:$PATH"
