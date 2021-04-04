@@ -13,6 +13,9 @@ cp .bashrc ~/
 sudo apt-get update
 sudo apt-get install git rbenv ruby-build
 
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/hiroyuki/.bash_profile
+
 break;
 ;;
 [Nn]* )
