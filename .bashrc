@@ -18,6 +18,7 @@ alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
 alias eng='LANG=C LANGUAGE=C LC_ALL=C'
 alias brew='/home/linuxbrew/.linuxbrew/bin/brew'
+alias rbenv='/home/linuxbrew/.linuxbrew/bin/rbenv'
 
 alias d='cd /home/hiroyuki/github/dotfilesv'
 alias sea='apt-cache search'
@@ -47,5 +48,5 @@ PS1="[\\[\\033[31m\]\u \W\[\033[0m\]]\\$ "
 
 setxkbmap -option apple:badmap -layout jp
 
-export PATH="$HOME/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/serverkit-0.7.0/bin:$PATH"
-export PATH="$HOME/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/rebuild-0.6.1/bin:$PATH"
+export PATH="$HOME/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/serverkit-0.7.0/bin:$PATH"
+export PATH="$HOME/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rebuild-0.6.1/bin:$PATH"
