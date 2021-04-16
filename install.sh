@@ -7,8 +7,9 @@ case $Answer in
 
 cp .vimrc ~/
 cp .gitconfig ~/
-mv ~/.bashrc ~/.bashrc.bak
-cp .bashrc ~/
+#mv ~/.bashrc ~/.bashrc.bak
+#cp .bashrc ~/
+mv ~/.zshrc ~/.zshrc.bak
 cp .zshrc ~/
 
 #sudo apt-get update
