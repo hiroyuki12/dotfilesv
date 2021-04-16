@@ -27,6 +27,12 @@ alias gl='git log'
 alias glp='git log -p'
 alias gche='git checkout'
 
+alias ll='ls -l'
+alias la='ls -a'
+alias lg='ls -G'
+
+alias d='cd ~github/dotfilesv'
+alias cls='clear'
 
 #-- Completion --#
 [ -e /usr/local/share/zsh-completions ] && fpath=(/usr/local/share/zsh-completions $fpath)
@@ -119,7 +125,8 @@ if [[ ${TERM} = "linux" ]]; then
     PROMPT='%B%F{red}%(?..%? )%f%b%B%F{red}%n%f%b@%m %B%40<..<%~%<< %b%# '
 else
     function powerline_precmd() {
-        PS1="$(powerline-go -error $? -shell zsh)"
+        #PS1="$(powerline-go -error $? -shell zsh)"
+	PS1="%{$fg[green]%}%~%(!.#. %{$reset_color%}$) "
     }
 
     function install_powerline_precmd() {
