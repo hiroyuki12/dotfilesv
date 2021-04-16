@@ -9,6 +9,7 @@ cp .vimrc ~/
 cp .gitconfig ~/
 mv ~/.bashrc ~/.bashrc.bak
 cp .bashrc ~/
+cp .zshrc ~/
 
 #sudo apt-get update
 #sudo apt-get install git rubygems vnc-server vim
