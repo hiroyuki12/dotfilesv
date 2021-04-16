@@ -31,7 +31,7 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lg='ls -G'
 
-alias d='cd ~github/dotfilesv'
+alias d='cd ~/github/dotfilesv'
 alias cls='clear'
 
 #-- Completion --#
