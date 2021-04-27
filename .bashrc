@@ -13,6 +13,7 @@ fi
 #ulimit -s unlimited
 
 # set aliases
+alias serverkit='~/.gem/ruby/2.6.0/gems/serverkit-0.7.0/bin/serverkit'
 alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'

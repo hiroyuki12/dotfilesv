@@ -7,10 +7,10 @@ case $Answer in
 
 cp .vimrc ~/
 cp .gitconfig ~/
-#mv ~/.bashrc ~/.bashrc.bak
-#cp .bashrc ~/
-mv ~/.zshrc ~/.zshrc.bak
-cp .zshrc ~/
+mv ~/.bashrc ~/.bashrc.bak
+cp .bashrc ~/
+#mv ~/.zshrc ~/.zshrc.bak
+#cp .zshrc ~/
 
 #sudo apt-get update
 #sudo apt-get install git rubygems vnc-server vim

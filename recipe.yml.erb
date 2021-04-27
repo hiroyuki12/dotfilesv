@@ -1,16 +1,16 @@
 resources:
-  - type: command
-    script: brew update
+#  - type: command
+#    script: brew update
 
   # brew
-  - type: package
-    name: peco
-  - type: package
-    name: wget
-  - type: package
-    name: jq
-  - type: package
-    name: deno 
+#  - type: package
+#    name: peco
+#  - type: package
+#    name: wget
+#  - type: package
+#j    name: jq
+#  - type: package
+#    name: deno 
 #  - type: package
 #    name: ansible
 #  - type: package
@@ -37,8 +37,8 @@ resources:
   # brew cask
 #  - type: homebrew_cask_package
 #    name: dropbox
-  - type: homebrew_cask_package
-    name: mounty
+#  - type: homebrew_cask_package
+#    name: mounty
 #  - type: homebrew_cask_package
 #    name: alfred
 #  - type: homebrew_cask_package
@@ -65,27 +65,6 @@ resources:
 #    name: visual-studio-code
 
   # defaults
-    type: defaults
-    domain: com.apple.finder
-    key: ShowStatusBar
-    value: 1
-  - id: ShowPath_finder # Show Path Titlebar
-    type: defaults
-    domain: com.apple.finder
-    key: _FXShowPosixPathInTitle
-    value: 0
-  - type: defaults
-    domain: com.apple.dock
-    key: magnification
-    value: 1
-    notify:
-      - killall_Dock
-  - type: defaults
-    domain: com.apple.dock
-    key: largesize
-    value: 100
-    notify:
-      - killall_Dock
 #  - type: defaults
 #    key: InitialKeyRepeat
 #    value: 15
@@ -96,11 +75,6 @@ resources:
 #      - killall_Safari
 
   # command
-  - type: command
-    check_script: defaults find orientation | grep left
-    script: defaults write "com.apple.dock" "orientation" -string "left"
-    notiry:
-      - killall_Dock
 # New windows points to home (finder)
   #- type: command
   #  check_script: defaults find NewWindowTarget | grep PfHm
@@ -156,15 +130,12 @@ resources:
 
 # dotfiles
   - type: git
-    path: /Users/<%= ENV["USER"] %>/github/dotfiles
+    #path: /Users/<%= ENV["USER"] %>/github/dotfiles
+    path: /home/hiroyuki/github/dotfiles
     repository: https://github.com/hiroyuki12/dotfiles.git
     state: updated
 
 # HelloWorldSwift
-  - type: git
-    path: /Users/<%= ENV["USER"] %>/github/HelloWorldSwift
-    repository: https://github.com/hiroyuki12/HelloWorldSwift.git
-    state: updated
 
 # HelloXamarinForms
 #  - type: git
@@ -190,21 +161,14 @@ resources:
 #    script: osascript ~/github/dotfiles/appleScript/modifierKeyCapsLockToCommand.scpt
 
 # Keyboard Use F1,F2
-  - type: command
-    check_script: defaults find fnState | grep 1
-    script: osascript ~/github/dotfiles/appleScript/KeyboardUseF1F2.scpt
 
 # Finder Preference Sidebar Show Home
 #  - type: command
 #    script: osascript ~/github/dotfiles/appleScript/FinderPreferenceSidebar.scpt
 
 # Add Input Sources Japanese
-  - type: command
-    script: automator -v ~/github/dotfiles/automator/addInputSourceJapanese.app
 
 # change input source Control J (After Add Input Sources Japanese)
-  - type: command
-    script: osascript ~/github/dotfiles/appleScript/changeInputSourceControlJ.scpt
 
 # Key Repeat Fast, Delay Util Repeat Short
 #  - type: command
@@ -220,21 +184,21 @@ resources:
 #    script: osascript ~/github/dotfiles/appleScript/threeFingerDrag.scpt
 
 # ln .vimrc, .bash_profile, .gitconfig
-  - type: symlink
-    source: /Users/<%= ENV["USER"] %>/.vimrc
-    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.vimrc
-  - type: symlink
-    source: /Users/<%= ENV["USER"] %>/.zshrc
-    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.zshrc
-  - type: symlink
-    source: /Users/<%= ENV["USER"] %>/.gitconfig
-    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.gitconfig
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/.vimrc
+#    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.vimrc
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/.zshrc
+#    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.zshrc
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/.gitconfig
+#    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.gitconfig
 #  - type: symlink
 #    source: /Users/<%= ENV["USER"] %>/.netrc
 #    destination: /Volumes/share/Mac/.netrc
-  - type: symlink
-    source: /Users/<%= ENV["USER"] %>/Desktop/share
-    destination: /Volumes/share
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/Desktop/share
+#    destination: /Volumes/share
 
 
   # rbenv_ruby
@@ -247,14 +211,6 @@ resources:
   #    dependencies: true
   #    profile_path: /Users/hiroyuki/.bash_profile
 
-  - type: defaults
-    domain: com.apple.Terminal
-    key: Default Window Settings
-    value: Basic2
-  - type: defaults
-    domain: com.apple.Terminal
-    key: Startup Window Settings
-    value: Basic2
  #   notify:
  #     - killall_Terminal
 
