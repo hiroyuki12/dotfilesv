@@ -1,10 +1,10 @@
 resources:
-#  - type: command
-#    script: brew update
+  - type: command
+    script: brew update
 
   # brew
-#  - type: package
-#    name: peco
+  - type: package
+    name: peco
 #  - type: package
 #    name: wget
 #  - type: package
@@ -184,15 +184,15 @@ resources:
 #    script: osascript ~/github/dotfiles/appleScript/threeFingerDrag.scpt
 
 # ln .vimrc, .bash_profile, .gitconfig
-#  - type: symlink
-#    source: /Users/<%= ENV["USER"] %>/.vimrc
-#    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.vimrc
-#  - type: symlink
-#    source: /Users/<%= ENV["USER"] %>/.zshrc
-#    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.zshrc
-#  - type: symlink
-#    source: /Users/<%= ENV["USER"] %>/.gitconfig
-#    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.gitconfig
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.vimrc
+    destination: /home/<%= ENV["USER"] %>/github/dotfilesv/.vimrc
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.bashrc
+    destination: /home/<%= ENV["USER"] %>/github/dotfilesv/.bashrc
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.gitconfig
+    destination: /home/<%= ENV["USER"] %>/github/dotfilesv/.gitconfig
 #  - type: symlink
 #    source: /Users/<%= ENV["USER"] %>/.netrc
 #    destination: /Volumes/share/Mac/.netrc

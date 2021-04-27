@@ -13,9 +13,11 @@ fi
 #ulimit -s unlimited
 
 # set aliases
-alias sv='~/.gem/ruby/2.6.0/gems/serverkit-0.7.0/bin/serverkit'
-alias sva='cd ~/github/dotfilesv/;~/.gem/ruby/2.6.0/gems/serverkit-0.7.0/bin/serverkit apply recipe.yml.erb'
+alias sv='~/bin/serverkit'
+alias sva='cd ~/github/dotfilesv/;~/bin/serverkit apply recipe.yml.erb'
 alias rebuild='mkdir ~/github;git clone https://github.com/hiroyuki12/dotfilesv;sh ~/github/dotfilesv/install.sh'
+alias re='sudo rpmbuild --rebuild'
+
 alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
@@ -52,4 +54,3 @@ PS1="[\\[\\033[31m\]\u \W\[\033[0m\]]\\$ "
 setxkbmap -option apple:badmap -layout jp
 
 export PATH="$HOME/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/serverkit-0.7.0/bin:$PATH"
-export PATH="$HOME/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/rebuild-0.6.1/bin:$PATH"
