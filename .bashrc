@@ -13,7 +13,8 @@ fi
 #ulimit -s unlimited
 
 # set aliases
-alias serverkit='~/.gem/ruby/2.6.0/gems/serverkit-0.7.0/bin/serverkit'
+alias sv='~/.gem/ruby/2.6.0/gems/serverkit-0.7.0/bin/serverkit'
+alias sva='cd ~/github/dotfilesv/;~/.gem/ruby/2.6.0/gems/serverkit-0.7.0/bin/serverkit apply recipe.yml.erb'
 alias rebuild='mkdir ~/github;git clone https://github.com/hiroyuki12/dotfilesv;sh ~/github/dotfilesv/install.sh'
 alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
