@@ -1,0 +1,1 @@
+sudo apt-get install xorg-x11-drv-dummy xorg-x11-drv-evdev xorg-x11-drv-intel xorg-x11-drv-keyboard xorg-x11-drv-mga xorg-x11-drv-mouse xorg-x11-drv-nouveau xorg-x11-drv-synaptics xorg-x11-drv-vesa xorg-x11-drv-vmmouse xorg-x11-drv-vmware xorg-x11-drv-void xorg-x11-drv-wacom xorg-x11-server-Xephyr xorg-x11-server-Xorg xorg-x11-server-common xorg-x11-xinit xterm xz xz-libs

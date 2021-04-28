@@ -12,12 +12,12 @@ which vim > /dev/null || sudo apt-get install vim
 which lightdm > /dev/null || sudo apt-get install lightdm
 which git > /dev/null || sudo apt-get install git
 
-sudo cp lightdm_display.sh /etc/lightdm/
-sudo chmod +x /etc/lightdm/lightdm_display.sh
+#sudo cp lightdm_display.sh /etc/lightdm/
+#sudo chmod +x /etc/lightdm/lightdm_display.sh
 
 # install serverkit
 which gem > /dev/null || sudo apt-get install gem
-which bundle > /dev/null || gem install bundler
+which bundle > /dev/null || sudo gem install bundler
 bundle install > /dev/null
 
 # Run installer
