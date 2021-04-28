@@ -6,11 +6,6 @@ case $Answer in
   '' | [Yy]* )
 
 which rpmbuild > /dev/null || sudo apt-get install rpm-build
-which synaptic > /dev/null || sudo apt-get install synaptic
-which startxfce4 > /dev/null || sudo apt-get install task-xfce
-which vim > /dev/null || sudo apt-get install vim
-which lightdm > /dev/null || sudo apt-get install lightdm
-which git > /dev/null || sudo apt-get install git
 
 sudo cp lightdm_display.sh /etc/lightdm/
 sudo chmod +x /etc/lightdm/lightdm_display.sh

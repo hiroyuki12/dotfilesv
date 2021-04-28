@@ -159,7 +159,7 @@ endif
 "set showmatch " 対応するカッコを強調表示(   ) 
 
 "colorscheme darkblue " darkblue はデフォルトでインストール済み
-"colorscheme desert
+colorscheme desert
 
 " keymap
 " http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
