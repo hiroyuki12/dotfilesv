@@ -56,6 +56,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -67,4 +68,4 @@ DEPENDENCIES
   serverkit-rbenv
 
 BUNDLED WITH
-   2.2.16
+   2.2.17

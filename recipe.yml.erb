@@ -75,25 +75,25 @@ resources:
 #      - killall_Safari
 
   # command
-  - type: command
-    check_script: rpm -q git
-    script: sudo apt-get install git
+#  - type: command
+#    check_script: rpm -q git
+#    script: sudo apt-get install git
 
-  - type: command
-    check_script: rpm -q lightdm
-    script: sudo apt-get install lightdm 
+#  - type: command
+#    check_script: rpm -q lightdm
+#    script: sudo apt-get install lightdm 
 
-  - type: command
-    check_script: rpm -q vim
-    script: sudo apt-get install vim
+#  - type: command
+#    check_script: rpm -q vim
+#    script: sudo apt-get install vim
 
 #  - type: command
 #    check_script: rpm -q task-xfce
 #    script: sudo apt-get install task-xfce
 
-  - type: command
-    check_script: rpm -q synaptic
-    script: sudo apt-get install synaptic
+#  - type: command
+#    check_script: rpm -q synaptic
+#    script: sudo apt-get install synaptic
 
 # New windows points to home (finder)
   #- type: command
@@ -154,11 +154,11 @@ resources:
 #    state: updated
 
 # dotfiles
-  - type: git
-    #path: /Users/<%= ENV["USER"] %>/github/dotfiles
-    path: /home/hiroyuki/github
-    repository: https://github.com/hiroyuki12/dotfilesv.git
-    state: updated
+#  - type: git
+#    #path: /Users/<%= ENV["USER"] %>/github/dotfiles
+#    path: /home/hiroyuki/github
+#    repository: https://github.com/hiroyuki12/dotfilesv.git
+#    state: updated
 
 # HelloWorldSwift
 
