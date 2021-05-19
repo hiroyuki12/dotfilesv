@@ -23,7 +23,6 @@ alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
 alias eng='LANG=C LANGUAGE=C LC_ALL=C'
 #alias brew='~/.linuxbrew/bin/brew'
-#alias rbenv='/home/linuxbrew/.linuxbrew/bin/rbenv'
 
 alias d='cd ~/github/dotfilesv'
 alias sea='apt-cache search'
@@ -41,7 +40,6 @@ alias gl='git log'
 alias glp='git log -p'
 
 alias cls='clear'
-#alias dot='cd github/dotfilesv'
 #alias xx='startxfce4'
 alias ww='source .bashrc'
 alias mk='mkrpmspec'
@@ -54,4 +52,5 @@ PS1="[\\[\\033[31m\]\u \W\[\033[0m\]]\\$ "
 setxkbmap -option apple:badmap -layout jp
 
 # serverkit
-export PATH="$HOME/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/serverkit-0.7.0/bin:$PATH"
+#export PATH="$HOME/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/serverkit-0.7.0/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
