@@ -54,3 +54,6 @@ setxkbmap -option apple:badmap -layout jp
 # serverkit
 #export PATH="$HOME/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/serverkit-0.7.0/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+
+# ansible
+export PATH=$PATH:$HOME/.local/bin
