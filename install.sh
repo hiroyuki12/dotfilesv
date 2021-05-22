@@ -44,15 +44,18 @@ read -p 'Now Install Homebrew? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
-#install Hombrew
+#install Homebrew
 which /home/linuxbrew/.linuxbrew/bin/brew > /dev/null
 if [ $? -ne 0 ]; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  echo 'eval "$(/home/hiroyuki/.linuxbrew/bin/brew shellenv)"' >> ~/.bash_profile
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo '# Homebrew' >> /home/hiroyuki/.bash_profile
+  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/hiroyuki/.bash_profile
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 ~/.linuxbrew/bin/brew -v
 
+# brew help
 # brew update
 # brew doctor
 # brew install wget
