@@ -14,7 +14,7 @@ if [ $? -ne 0 ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-/.linuxbrew/bin/brew -v
+/home/linuxbrew/.linuxbrew/bin/brew -v
 
 # brew help
 # brew update
