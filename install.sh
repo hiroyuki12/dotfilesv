@@ -12,6 +12,7 @@ if [ $? -ne 0 ]; then
   echo '# Homebrew' >> /home/hiroyuki/.bash_profile
   echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/hiroyuki/.bash_profile
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  sudo apt-get install build-essntial
 fi
 
 /home/linuxbrew/.linuxbrew/bin/brew -v
