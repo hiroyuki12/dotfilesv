@@ -15,9 +15,12 @@ which gem > /dev/null || sudo apt-get install gem
 which bundle > /dev/null || sudo gem install bundler
 bundle install > /dev/null
 
+# backup
+cp ~/.bashrc ~/.bashrc.bak
+
 # Run installer
-mkdir ~/github
-git clone https://github.com/hiroyuki12/dotfilesv
+#mkdir ~/github
+#git clone https://github.com/hiroyuki12/dotfilesv
 cd ~/github/dotfilesv
 ~/bin/serverkit apply recipe.yml.erb
 
@@ -45,15 +48,14 @@ case $Answer in
 which /home/linuxbrew/.linuxbrew/bin/brew > /dev/null
 if [ $? -ne 0 ]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/hiroyuki/.bash_profile
+  echo 'eval "$(/home/hiroyuki/.linuxbrew/bin/brew shellenv)"' >> ~/.bash_profile
 fi
 
-/home/linuxbrew/.linuxbrew/bin/brew -v
+~/.linuxbrew/bin/brew -v
 
-#brew install rbenv
-#brew reinstall ruby-build
-
-#rbenv install 2.6.6
+# brew update
+# brew doctor
+# brew install wget
 
 break;
 ;;
