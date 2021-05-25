@@ -13,10 +13,10 @@ sudo chmod +x /etc/lightdm/lightdm_display.sh
 which bundle > /dev/null || sudo gem install bundler
 bundle install > /dev/null
 
-# Run installer
-mkdir ~/github
-git clone https://github.com/hiroyuki12/dotfilesv
-cd ~/github/dotfilesv/plamo
+# Run installer (ruby 2.7.3)
+#mkdir ~/github
+#git clone https://github.com/hiroyuki12/dotfilesv
+#cd ~/github/dotfilesv/plamo
 #~/bin/serverkit apply recipe.yml.erb
 
 #sudo apt-get update
@@ -43,13 +43,13 @@ case $Answer in
 which /home/linuxbrew/.linuxbrew/bin/brew > /dev/null
 if [ $? -ne 0 ]; then
   sudo ln -s /usr/bin/touch /bin
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo '# Homebrew' >> ~/.bashrc
   echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
 fi
 
 /home/linuxbrew/.linuxbrew/bin/brew -v
 
-#brew install rbenv
 #brew reinstall ruby-build
 
 #rbenv install 2.6.6
@@ -58,6 +58,33 @@ break;
 ;;
 [Nn]* )
   echo "Skip Install Homebrew"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+while true; do
+read -p 'Now Install rbenv? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+#install rbenv
+which rbenv > /dev/null
+if [ $? -ne 0 ]; then
+  brew install rbenv
+fi
+
+rbenv --version
+
+# rbenv install -l
+# rbenv install 2.7.3
+
+break;
+;;
+[Nn]* )
+  echo "Skip Install rbenv"
   break;
   ;;
 * )
