@@ -48,11 +48,11 @@ if [ "$TERM" = "dumb" ] ; then
   LS_OPTIONS="-F -T 0 -N --color=none"
 fi
 
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-# brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 export LS_OPTIONS
 alias ls='ls $LS_OPTIONS'
