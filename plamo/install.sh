@@ -8,16 +8,6 @@ case $Answer in
 sudo cp lightdm_display.sh /etc/lightdm/
 sudo chmod +x /etc/lightdm/lightdm_display.sh
 
-# install serverkit
-#which gem > /dev/null || sudo apt-get install gem
-which bundle > /dev/null || sudo gem install bundler
-bundle install > /dev/null
-
-# Run installer (ruby 2.7.3)
-#mkdir ~/github
-#git clone https://github.com/hiroyuki12/dotfilesv
-#cd ~/github/dotfilesv/plamo
-#~/bin/serverkit apply recipe.yml.erb
 
 #sudo apt-get update
 #sudo apt-get install git rubygems vnc-server vim
@@ -52,7 +42,6 @@ fi
 
 #brew reinstall ruby-build
 
-#rbenv install 2.6.6
 
 break;
 ;;
@@ -66,7 +55,7 @@ esac
 done;
 
 while true; do
-read -p 'Now Install rbenv? [Y/n]' Answer
+read -p 'Now Install rbenv & serverkit? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
@@ -78,8 +67,19 @@ fi
 
 rbenv --version
 
-# rbenv install -l
-# rbenv install 2.7.3
+source ~/.bashrc
+rbenv install -l
+rbenv install 2.7.3
+rbenv versions
+rbenv global 2.7.3
+ruby -v
+
+# install serverkit
+which bundle > /dev/null || sudo gem install bundler
+bundle install > /dev/null
+
+# Run installer (ruby 2.7.3)
+serverkit apply ~/github/dotfilesv/plamo/recipe.yml.erb
 
 break;
 ;;
