@@ -33,7 +33,9 @@ echo '# rbenv' >> ~/.bash_profile
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
-echo "Require logout"
+exec $SHELL --login
+
+#echo "Require logout"
 
 break;
 ;;
