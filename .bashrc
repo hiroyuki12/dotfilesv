@@ -13,10 +13,14 @@ fi
 #ulimit -s unlimited
 
 # set aliases
-alias sv='~/bin/serverkit'
-alias sva='cd ~/github/dotfilesv/;~/bin/serverkit apply recipe.yml.erb'
+#alias sv='~/bin/serverkit'
+#Fedora
+alias sv='serverkit'
+#alias sva='cd ~/github/dotfilesv/;~/bin/serverkit apply recipe.yml.erb'
+# Fedora
+alias sva='serverkit apply recipe.yml.erb'
 #alias rebuild='mkdir ~/github;git clone https://github.com/hiroyuki12/dotfilesv;sh ~/github/dotfilesv/install.sh'
-alias re='sudo rpmbuild --rebuild'
+#alias re='sudo rpmbuild --rebuild'
 
 alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
