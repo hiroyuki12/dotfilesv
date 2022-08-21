@@ -25,9 +25,16 @@ alias eng='LANG=C LANGUAGE=C LC_ALL=C'
 #alias brew='~/.linuxbrew/bin/brew'
 
 alias d='cd ~/github/dotfilesv'
-alias sea='apt-cache search'
-alias a='sudo apt-get install'
-alias bb='sudo apt-get update;sudo apt-get upgrade -y'
+
+# Vine Linux
+#alias sea='apt-cache search'
+#alias a='sudo apt-get install'
+#alias bb='sudo apt-get update;sudo apt-get upgrade -y'
+
+# Fedora Linux
+alias sea='dnf search'
+alias a='sudo dnf install'
+
 alias le='leafpad'
 
 alias gd='git diff'
