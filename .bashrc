@@ -1,4 +1,5 @@
 # .bashrc
+export EDITOR=vim
 
 # User specific aliases and functions
 
