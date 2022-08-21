@@ -84,6 +84,7 @@ case $Answer in
 which gem > /dev/null || sudo dnf install rubygems
 which bundle > /dev/null || sudo dnf install rubygem-bundler
 bundle install > /dev/null
+gem install serverkit
 
 # backup
 cp ~/.bashrc ~/.bashrc.bak
