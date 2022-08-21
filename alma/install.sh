@@ -62,7 +62,7 @@ case $Answer in
 rbenv install 2.7.6
 rbenv global 2.7.6
 
-echo "Requires logout"
+#echo "Requires logout"
 
 break;
 ;;
