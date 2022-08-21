@@ -75,6 +75,23 @@ resources:
 #      - killall_Safari
 
   # command
+  - type: command
+    script: sudo dnf install -y gnome-tweaks vim git npm cifs-utils gnome-shell-extension-dash-to-dock gnome-extensions-app
+
+  - type: command
+    script: sudo mkdir /mnt/nas
+
+  - type: command
+    script: git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+
+  - type: command
+    script: mkdir ~/.rbenv/plugins
+
+  - type: command
+    script: git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+  - type: command
+    script: sudo dnf install bzip2 gcc openssl-devel readline-devel zlib-devel perl-FindBin perl-File-Compare
 #  - type: command
 #    check_script: rpm -q git
 #    script: sudo apt-get install git

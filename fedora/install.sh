@@ -1,5 +1,52 @@
 #!/usr/bin/env bash
 
+
+while true; do
+read -p 'Now install rbenv? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+mkdir ~/.rbenv/plugins
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+sudo dnf install bzip2 gcc openssl-devel readline-devel zlib-devel perl-FindBin perl-File-Compare
+
+break;
+;;
+[Nn]* )
+  echo "Skip install rbenv"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+
+
+while true; do
+read -p 'Now install ruby 2.7.6? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+rbenv install 2.7.6
+rbenv global 2.7.6
+
+echo "Requires logout"
+
+break;
+;;
+[Nn]* )
+  echo "Skip install ruby 2.7.6"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+
+
 while true; do
 read -p 'Now Initial Setting? [Y/n]' Answer
 case $Answer in
