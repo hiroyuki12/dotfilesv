@@ -1,0 +1,252 @@
+resources:
+#  - type: command
+#    script: brew update
+
+  # brew
+#  - type: homebrew_package
+#    name: peco
+#  - type: package
+#    name: wget
+#  - type: homebrew_package
+#    name: jq
+#  - type: homebrew_package
+#    name: deno 
+#  - type: package
+#    name: ansible
+#  - type: package
+#    name: sphinx
+#  - type: package
+#    name: nginx
+#  - type: package
+#    name: tomcat
+#  - type: package
+#    name: mysql
+#  - type: package
+#    name: docker-compose
+#  - type: package
+#    name: caskroom/cask/brew-cask
+#  - type: package
+#    name: packer
+#  - type: package
+#    name: hub  # hub browse
+#  - type: package
+#    name: go
+#  - type: package
+#    name: mackup
+
+  # brew cask
+#  - type: homebrew_cask_package
+#    name: dropbox
+#  - type: homebrew_cask_package
+#    name: mounty
+#  - type: homebrew_cask_package
+#    name: alfred
+#  - type: homebrew_cask_package
+#    name: atom
+#  - type: homebrew_cask_package
+#    name: docker-toolbox
+#  - type: homebrew_cask_package
+#    name: java
+#  - type: homebrew_cask_package
+#    name: electron
+#  - type: homebrew_cask_package
+#    name: google-japanese-ime
+#  - type: homebrew_cask_package
+#    name: karabiner
+#  - type: homebrew_cask_package
+#    name: skitch
+#  - type: homebrew_cask_package
+#    name: slack
+#  - type: homebrew_cask_package
+#    name: vagrant
+# - type: homebrew_cask_package
+#    name: virtualbox
+#  - type: homebrew_cask_package
+#    name: visual-studio-code
+
+  # defaults
+#  - type: defaults
+#    key: InitialKeyRepeat
+#    value: 15
+#  - type: defaults
+#    key: KeyRepeat
+#    value: 2
+#    notify:
+#      - killall_Safari
+
+  # command
+#  - type: command
+#    check_script: rpm -q git
+#    script: sudo apt-get install git
+
+#  - type: command
+#    check_script: rpm -q lightdm
+#    script: sudo apt-get install lightdm 
+
+#  - type: command
+#    check_script: rpm -q vim
+#    script: sudo apt-get install vim
+
+#  - type: command
+#    check_script: rpm -q task-xfce
+#    script: sudo apt-get install task-xfce
+
+#  - type: command
+#    check_script: rpm -q synaptic
+#    script: sudo apt-get install synaptic
+
+# New windows points to home (finder)
+  #- type: command
+  #  check_script: defaults find NewWindowTarget | grep PfHm
+  #  script: defaults write com.apple.finder NewWindowTarget -string "PfHm"
+
+  #- type: command
+  #  script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+#  - type: command
+#    script: defaults write -g com.apple.trackpad.scaling -float 2.0
+
+# Three finger drag on
+  #- type: command
+  #  check_script: defaults find TrackpadThreeFingerDrag | grep 1
+  #  script: defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+  #- type: command
+  #  check_script: defaults find TrackpadThreeFingerDrag | grep 1
+  #  script: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+
+
+# Set `${HOME}` as the default location for new Finder windows
+# 新しいウィンドウでデフォルトでホームフォルダを開く
+#  - type: command
+#    script: defaults write com.apple.finder NewWindowTarget -string "PfDe"
+#  - type: command
+#    script: defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+#  - type: command
+#    script: killall Finder
+
+#  - type: karabiner
+#    key: remap.jis_shiftSpace2toggle_kana_eisuu
+#    value: 1
+#    recheck_script: "true"
+#  - type: karabiner
+#    key: repeat.initial_wait
+#    value: 200
+#    recheck_script: "true"
+#  - type: karabiner
+#    key: repeat.wait
+#    value: 30
+#    recheck_script: "true"
+
+#  - type: line
+#    path: /etc/sudoers
+#    pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
+#    line: "hiroyuki ALL=(ALL) NOPASSWD: ALL"
+#    insert_before: "^#includedir"
+#    validation_script: visudo -cf %{path}
+
+#  - type: line
+#    path: /etc/lightdm/lightdm.conf
+#    line: "display-setup-script=/etc/lightdm/lightdm_display.sh"
+
+# NeoBundle (easy-motion)
+#  - type: git
+#    path: /Users/<%= ENV["USER"] %>/.vim/bundle/neobundle.vim
+#    repository: https://github.com/Shougo/neobundle.vim
+#    state: updated
+
+# dotfiles
+#  - type: git
+#    #path: /Users/<%= ENV["USER"] %>/github/dotfiles
+#    path: /home/hiroyuki/github
+#    repository: https://github.com/hiroyuki12/dotfilesv.git
+#    state: updated
+
+# HelloWorldSwift
+
+# HelloXamarinForms
+#  - type: git
+#    path: /Users/<%= ENV["USER"] %>/github/HelloXamarinForm
+#    repository: /Volumes/share/Git/HelloXamarinForm
+#    state: updated
+
+  ## Apple Script
+# set Tap to click on
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/tapToClickOn.scpt
+
+# change Dsiaplay Resolution
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/changeDisplayResolution.scpt
+
+# show Favorites bar (safari)
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
+
+# change caps lock to command
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/modifierKeyCapsLockToCommand.scpt
+
+# Keyboard Use F1,F2
+
+# Finder Preference Sidebar Show Home
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/FinderPreferenceSidebar.scpt
+
+# Add Input Sources Japanese
+
+# change input source Control J (After Add Input Sources Japanese)
+
+# Key Repeat Fast, Delay Util Repeat Short
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/KeyRepeatFast.scpt
+
+# change correct spelling off
+#  - type: command
+#    check_script: defaults find AutomaticSpellingCorrection | grep 0
+#    script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
+
+# three finger drag
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/threeFingerDrag.scpt
+
+# ln .vimrc, .bash_profile, .gitconfig
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.vimrc
+    destination: github/dotfilesv/.vimrc
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.bashrc
+    destination: github/dotfilesv/.bashrc
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.gitconfig
+    destination: github/dotfilesv/.gitconfig
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/Desktop/share
+#    destination: /Volumes/share
+
+
+  # rbenv_ruby
+  #  - type: rbenv_ruby
+  #    #version: 2.5.0-dev
+  #    version: 2.4.1
+  #    global: true
+  #    rbenv_executable_path: /usr/local/bin/rbenv
+  #    user: hiroyuki
+  #    dependencies: true
+  #    profile_path: /Users/hiroyuki/.bash_profile
+
+ #   notify:
+ #     - killall_Terminal
+
+handlers:
+  - id: killall_Finder
+    type: command
+    script: killall Finder
+  - id: killall_Dock
+    type: command
+    script: killall Dock
+  - id: killall_Safari
+    type: command
+    script: killall Safari
+  - id: killall_Terminal
+ #   type: command
+ #   script: killall Terminal
+
