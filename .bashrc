@@ -33,7 +33,7 @@ alias d='cd ~/github/dotfilesv'
 
 # Fedora Linux
 alias sea='dnf search'
-alias a='sudo dnf install'
+alias a='sudo dnf install -y'
 
 alias le='leafpad'
 
