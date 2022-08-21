@@ -9,7 +9,7 @@ case $Answer in
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 mkdir ~/.rbenv/plugins
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-sudo dnf install bzip2 gcc openssl-devel readline-devel zlib-devel perl-FindBin perl-File-Compare
+sudo dnf install bzip2 gcc openssl-devel readline-devel zlib-devel perl-FindBin perl-File-Compare patch
 
 break;
 ;;
@@ -21,6 +21,34 @@ break;
   echo Please answer YES or NO.
 esac
 done;
+
+
+
+while true; do
+read -p 'Now Add 3 line .bash_profile for rbenv? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+echo '# rbenv' >> ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+
+echo "Require logout"
+
+break;
+;;
+[Nn]* )
+  echo "Skip Add 3 line .bash_profile for rbenv"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+
+
+
 
 
 
