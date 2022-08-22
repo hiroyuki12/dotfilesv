@@ -9,7 +9,10 @@ case $Answer in
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 mkdir ~/.rbenv/plugins
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-sudo apt install bzip2 gcc openssl patch make zlib1g-dev apt-file firefox gnome-tweaks cifs-utils
+#Ubuntu
+#sudo apt install bzip2 gcc openssl patch make zlib1g-dev apt-file firefox gnome-tweaks cifs-utils
+#Debian
+sudo apt install bzip2 gcc openssl patch make zlib1g-dev apt-file gnome-tweaks cifs-utils curl
 
 break;
 ;;
@@ -94,7 +97,7 @@ cp ~/.bashrc ~/.bashrc.bak
 # Run installer
 #mkdir ~/github; cd github
 #git clone https://github.com/hiroyuki12/dotfilesv
-cd ~/github/dotfilesv/fedora
+cd ~/github/dotfilesv/ubuntu
 serverkit apply recipe.yml.erb
 
 sudo update-alternatives --set editor /usr/bin/vim.basic
