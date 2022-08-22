@@ -9,7 +9,7 @@ case $Answer in
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 mkdir ~/.rbenv/plugins
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-sudo apt install bzip2 gcc openssl patch make zlib1g-dev apt-file
+sudo apt install bzip2 gcc openssl patch make zlib1g-dev apt-file firefox gnome-tweaks cifs-utils
 
 break;
 ;;
@@ -97,6 +97,8 @@ cp ~/.bashrc ~/.bashrc.bak
 cd ~/github/dotfilesv/fedora
 serverkit apply recipe.yml.erb
 
+sudo update-alternatives --set editor /usr/bin/vim.basic
+
 break;
 ;;
 [Nn]* )
@@ -109,3 +111,49 @@ esac
 done;
 
 
+
+
+while true; do
+read -p 'Now install nvm? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+echo "need $ source .bashrc"
+
+break;
+;;
+[Nn]* )
+  echo "Skip install nvm"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+
+
+
+
+while true; do
+read -p 'Now install node 16.14.0? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+nvm install 16.14.0
+nvm use 16.14.0
+node -v
+npm -v
+
+break;
+;;
+[Nn]* )
+  echo "Skip install node 16.14.0"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
