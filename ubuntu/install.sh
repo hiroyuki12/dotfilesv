@@ -101,6 +101,7 @@ cd ~/github/dotfilesv/ubuntu
 serverkit apply recipe.yml.erb
 
 sudo update-alternatives --set editor /usr/bin/vim.basic
+LANG=C xdg-user-dirs-gtk-update
 
 break;
 ;;
