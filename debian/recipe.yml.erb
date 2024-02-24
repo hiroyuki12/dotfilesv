@@ -1,0 +1,152 @@
+resources:
+  - type: command
+    script: brew update
+
+  # brew
+#  - type: homebrew_package
+#    name: peco
+#  - type: package
+#    name: wget
+#  - type: homebrew_package
+#    name: jq
+#  - type: homebrew_package
+#    name: deno 
+#  - type: package
+#    name: ansible
+#  - type: package
+#    name: sphinx
+#  - type: package
+#    name: nginx
+#  - type: package
+#    name: tomcat
+#  - type: package
+#    name: mysql
+#  - type: package
+#    name: docker-compose
+#  - type: package
+#    name: caskroom/cask/brew-cask
+#  - type: package
+#    name: packer
+#  - type: package
+#    name: hub  # hub browse
+#  - type: package
+#    name: go
+#  - type: package
+#    name: mackup
+
+  # brew cask
+#  - type: homebrew_cask_package
+#    name: dropbox
+#  - type: homebrew_cask_package
+#    name: mounty
+#  - type: homebrew_cask_package
+#    name: alfred
+#  - type: homebrew_cask_package
+#    name: atom
+#  - type: homebrew_cask_package
+#    name: docker-toolbox
+#  - type: homebrew_cask_package
+#    name: java
+#  - type: homebrew_cask_package
+#    name: electron
+#  - type: homebrew_cask_package
+#    name: google-japanese-ime
+#  - type: homebrew_cask_package
+#    name: karabiner
+#  - type: homebrew_cask_package
+#    name: skitch
+#  - type: homebrew_cask_package
+#    name: slack
+#  - type: homebrew_cask_package
+#    name: vagrant
+# - type: homebrew_cask_package
+#    name: virtualbox
+#  - type: homebrew_cask_package
+#    name: visual-studio-code
+
+  # defaults
+#  - type: defaults
+#    key: InitialKeyRepeat
+#    value: 15
+
+  # command
+  - type: command
+    script: sudo apt install -y gnome-tweaks vim git npm cifs-utils gnome-shell-extension-dashtodock gnome-extensions-app
+
+  - type: command
+    script: sudo mkdir /mnt/nas
+
+#  - type: command
+#    script: git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+
+#  - type: command
+#    script: mkdir ~/.rbenv/plugins
+
+#  - type: command
+#    script: git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+#  - type: command
+#    script: sudo dnf install bzip2 gcc openssl-devel readline-devel zlib-devel perl-FindBin perl-File-Compare
+#  - type: command
+#    check_script: rpm -q git
+#    script: sudo apt-get install git
+
+#  - type: command
+#    check_script: rpm -q synaptic
+#    script: sudo apt-get install synaptic
+
+
+#  - type: line
+#    path: /etc/sudoers
+#    pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
+#    line: "hiroyuki ALL=(ALL) NOPASSWD: ALL"
+#    insert_before: "^#includedir"
+#    validation_script: visudo -cf %{path}
+
+
+# NeoBundle (easy-motion)
+#  - type: git
+#    path: /Users/<%= ENV["USER"] %>/.vim/bundle/neobundle.vim
+#    repository: https://github.com/Shougo/neobundle.vim
+#    state: updated
+
+# dotfiles
+  - type: git
+    #path: /Users/<%= ENV["USER"] %>/github/dotfiles
+    path: /home/hiroyuki/github/dotfilesv
+    repository: https://github.com/hiroyuki12/dotfilesv.git
+    state: updated
+
+
+# ln .vimrc, .bash_profile, .gitconfig
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.vimrc
+    destination: github/dotfilesv/.vimrc
+#  - type: symlink
+#    source: /home/<%= ENV["USER"] %>/.bashrc
+#    destination: github/dotfilesv/.bashrc
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.gitconfig
+    destination: github/dotfilesv/.gitconfig
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/Desktop/share
+#    destination: /Volumes/share
+
+
+  # rbenv_ruby
+  #  - type: rbenv_ruby
+  #    #version: 2.5.0-dev
+  #    version: 2.4.1
+  #    global: true
+  #    rbenv_executable_path: /usr/local/bin/rbenv
+  #    user: hiroyuki
+  #    dependencies: true
+  #    profile_path: /Users/hiroyuki/.bash_profile
+
+ #   notify:
+ #     - killall_Terminal
+
+handlers:
+ #   type: command
+ #   script: killall Terminal
+
