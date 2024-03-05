@@ -49,19 +49,18 @@ sudo chmod +x /etc/lightdm/lightdm_display.sh
 which gem > /dev/null || sudo apt install gem
 which bundle > /dev/null || sudo gem install bundler
 #bundle install > /dev/null
-sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
+which serverkit > /dev/null || sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
 
 # backup
 cp ~/.bashrc ~/.bashrc.bak
 
 # Run installer
-#mkdir ~/github
-#git clone https://github.com/hiroyuki12/dotfilesv
 cd ~/github/dotfilesv
 serverkit apply recipe.yml.erb
 
 #sudo apt update
-#sudo apt install git rubygems vnc-server vim
+sudo apt install git rubygems vnc-server vim kernel-devel 
+sudo mkdir /mnt/nas
 
 break;
 ;;
