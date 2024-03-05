@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo 'vine install.sh'
+
 while true; do
 read -p 'Now Install Homebrew? [Y/n]' Answer
 case $Answer in
@@ -12,7 +14,7 @@ if [ $? -ne 0 ]; then
   echo '# Homebrew' >> /home/hiroyuki/.bash_profile
   echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/hiroyuki/.bash_profile
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  sudo apt-get install build-essntial
+  sudo apt install build-essential ruby-devel
 fi
 
 /home/linuxbrew/.linuxbrew/bin/brew -v
@@ -38,15 +40,16 @@ read -p 'Now Initial Setting? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
-which rpmbuild > /dev/null || sudo apt-get install rpm-build
+which rpmbuild > /dev/null || sudo apt install rpm-build
 
 sudo cp lightdm_display.sh /etc/lightdm/
 sudo chmod +x /etc/lightdm/lightdm_display.sh
 
 # install serverkit
-which gem > /dev/null || sudo apt-get install gem
+which gem > /dev/null || sudo apt install gem
 which bundle > /dev/null || sudo gem install bundler
-bundle install > /dev/null
+#bundle install > /dev/null
+sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
 
 # backup
 cp ~/.bashrc ~/.bashrc.bak
@@ -55,10 +58,10 @@ cp ~/.bashrc ~/.bashrc.bak
 #mkdir ~/github
 #git clone https://github.com/hiroyuki12/dotfilesv
 cd ~/github/dotfilesv
-~/bin/serverkit apply recipe.yml.erb
+serverkit apply recipe.yml.erb
 
-#sudo apt-get update
-#sudo apt-get install git rubygems vnc-server vim
+#sudo apt update
+#sudo apt install git rubygems vnc-server vim
 
 break;
 ;;
