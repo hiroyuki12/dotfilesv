@@ -81,6 +81,10 @@ resources:
     check_script: rpm -q task-xfce
     script: sudo apt-get install task-xfce
 
+  - type: command
+    check_script: rpm -q kernel-devel
+    script: sudo apt-get install kernel-devel
+
 #  - type: command
 #    check_script: rpm -q synaptic
 #    script: sudo apt-get install synaptic

@@ -58,9 +58,7 @@ cp ~/.bashrc ~/.bashrc.bak
 cd ~/github/dotfilesv
 serverkit apply recipe.yml.erb
 
-#sudo apt update
-sudo apt install git rubygems vnc-server vim kernel-devel 
-sudo mkdir /mnt/nas
+sudo update-alternatives --set editor /usr/bin/vim.basic
 
 break;
 ;;
