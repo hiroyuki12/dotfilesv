@@ -27,7 +27,7 @@ alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
 alias eng='LANG=C LANGUAGE=C LC_ALL=C'
-#alias brew='~/.linuxbrew/bin/brew'
+alias brew='/home/linuxbrew/.linuxbrew/bin/brew'
 
 alias d='cd ~/github/dotfilesv'
 
