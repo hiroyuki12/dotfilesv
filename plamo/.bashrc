@@ -51,8 +51,8 @@ fi
 # Homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
 export LS_OPTIONS
 alias ls='ls $LS_OPTIONS'
@@ -235,3 +235,5 @@ fi
 if [ -f /etc/bashrc ] ; then
   . /etc/bashrc
 fi
+
+xmodmap ~/.Xmodmap
