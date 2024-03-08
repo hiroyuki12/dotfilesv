@@ -1,6 +1,6 @@
 resources:
-  - type: command
-    script: brew update
+#  - type: command
+#    script: brew update
 
   # brew
 #  - type: homebrew_package
@@ -73,8 +73,8 @@ resources:
   - type: command
     script: sudo apt install -y gnome-tweaks vim git npm cifs-utils gnome-shell-extension-dashtodock gnome-extensions-app
 
-  - type: command
-    script: sudo mkdir /mnt/nas
+#  - type: command
+#    script: sudo mkdir /mnt/nas
 
 #  - type: command
 #    script: git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
@@ -122,9 +122,9 @@ resources:
   - type: symlink
     source: /home/<%= ENV["USER"] %>/.vimrc
     destination: github/dotfilesv/.vimrc
-#  - type: symlink
-#    source: /home/<%= ENV["USER"] %>/.bashrc
-#    destination: github/dotfilesv/.bashrc
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.bashrc
+    destination: github/dotfilesv/.bashrc
   - type: symlink
     source: /home/<%= ENV["USER"] %>/.gitconfig
     destination: github/dotfilesv/.gitconfig

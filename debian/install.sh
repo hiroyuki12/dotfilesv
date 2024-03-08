@@ -15,7 +15,6 @@ if [ $? -ne 0 ]; then
   echo '# Homebrew' >> /home/hiroyuki/.bash_profile
   echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/hiroyuki/.bash_profile
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  sudo apt install build-essntial
 fi
 
 /home/linuxbrew/.linuxbrew/bin/brew -v
@@ -49,9 +48,9 @@ case $Answer in
 
 # install serverkit
 which gem > /dev/null || sudo apt install rubygems
-which bundle > /dev/null || sudo apt install rubygem-bundler
-bundle install > /dev/null
-which serverkit > /dev/null || gem install serverkit
+#which bundle > /dev/null || sudo apt install rubygem-bundler
+#bundle install > /dev/null
+which serverkit > /dev/null || sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
 
 # backup
 cp ~/.bashrc ~/.bashrc.bak
@@ -62,6 +61,10 @@ cp ~/.bashrc ~/.bashrc.bak
 cd ~/github/dotfilesv/debian
 serverkit apply recipe.yml.erb
 
+sudo update-alternatives --set editor /usr/bin/vim.basic
+sudo apt install vim cifs-utils gnome-shell-extension-dashtodock
+
+LANG=C xdg-user-dirs-gtk-update
 break;
 ;;
 [Nn]* )
