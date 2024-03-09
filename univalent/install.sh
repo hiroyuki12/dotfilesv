@@ -43,8 +43,8 @@ case $Answer in
 which gem > /dev/null || sudo pacman -S ruby
 which bundle > /dev/null || sudo pacman -S ruby
 #bundle install > /dev/null
-which serverkit > /dev/null || sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
-which serverkit > /dev/null || gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
+which /home/hiroyuki/.local/share/gem/ruby/3.0.0/bin/serverkit > /dev/null || sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
+which /home/hiroyuki/.local/share/gem/ruby/3.0.0/bin/serverkit > /dev/null || gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
 
 # backup
 cp ~/.bashrc ~/.bashrc.bak
@@ -56,7 +56,9 @@ cd ~/github/dotfilesv/univalent
 which vim > /dev/null || sudo pacman -S vim
 #sudo update-alternatives --set editor /usr/bin/vim.basic
 
-sudo pacman -S fcitx5-im fcitx5-mozc cifs-utils
+sudo pacman -S fcitx5-im fcitx5-mozc cifs-utils xdg-user-dirs-gtk
+
+LANG=C xdg-user-dirs-gtk-update
 
 break;
 ;;
