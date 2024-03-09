@@ -43,19 +43,20 @@ case $Answer in
 which gem > /dev/null || sudo pacman -S ruby
 which bundle > /dev/null || sudo pacman -S ruby
 #bundle install > /dev/null
-#which serverkit > /dev/null || sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
-
-sudo pacman -S fcitx5-im fcitx5-mozc cifs-utils
+which serverkit > /dev/null || sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
+which serverkit > /dev/null || gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
 
 # backup
 cp ~/.bashrc ~/.bashrc.bak
 
 # Run installer
-cd ~/github/dotfilesv
-#serverkit apply recipe.yml.erb
+cd ~/github/dotfilesv/univalent
+/home/hiroyuki/.local/share/gem/ruby/3.0.0/bin/serverkit apply recipe.yml.erb
 
 which vim > /dev/null || sudo pacman -S vim
 #sudo update-alternatives --set editor /usr/bin/vim.basic
+
+sudo pacman -S fcitx5-im fcitx5-mozc cifs-utils
 
 break;
 ;;
