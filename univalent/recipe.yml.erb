@@ -105,12 +105,15 @@ resources:
   - type: symlink
     source: /home/<%= ENV["USER"] %>/.vimrc
     destination: /home/<%= ENV["USER"] %>/github/dotfilesv/.vimrc
-#  - type: symlink
-#    source: /home/<%= ENV["USER"] %>/.bashrc
-#    destination: /home/<%= ENV["USER"] %>/github/dotfilesv/.bashrc
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.bashrc
+    destination: /home/<%= ENV["USER"] %>/github/dotfilesv/.bashrc
   - type: symlink
     source: /home/<%= ENV["USER"] %>/.gitconfig
     destination: /home/<%= ENV["USER"] %>/github/dotfilesv/.gitconfig
+  - type: symlink
+    source: /home/<%= ENV["USER"] %>/.Xmodmap
+    destination: /home/<%= ENV["USER"] %>/github/dotfilesv/univalent/.Xmodmap
 #  - type: symlink
 #    source: /Users/<%= ENV["USER"] %>/.netrc
 #    destination: /Volumes/share/Mac/.netrc
