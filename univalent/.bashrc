@@ -20,6 +20,7 @@ fi
 #ulimit -s unlimited
 
 alias sv='serverkit'
+alias serverkit='/home/hiroyuki/.local/share/gem/ruby/3.0.0/bin/serverkit'
 
 alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
