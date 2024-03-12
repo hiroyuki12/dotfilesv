@@ -23,6 +23,7 @@ alias sva='serverkit apply recipe.yml.erb'
 #alias rebuild='mkdir ~/github;git clone https://github.com/hiroyuki12/dotfilesv;sh ~/github/dotfilesv/install.sh'
 #alias re='sudo rpmbuild --rebuild'
 
+alias xx='startxfce4'
 alias ls='ls -F --color=auto'
 alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
