@@ -41,6 +41,7 @@ alias bb='sudo apt-get update;sudo apt-get upgrade -y'
 #alias sea='dnf search'
 #alias a='sudo dnf install -y'
 
+alias mo='mousepad'
 alias le='leafpad'
 
 alias gd='git diff'

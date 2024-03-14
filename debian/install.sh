@@ -11,6 +11,7 @@ case $Answer in
 #install Homebrew
 which /home/linuxbrew/.linuxbrew/bin/brew > /dev/null
 if [ $? -ne 0 ]; then
+  which curl > /dev/null || sudo apt install curl
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   echo '# Homebrew' >> /home/hiroyuki/.bash_profile
   echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/hiroyuki/.bash_profile
@@ -65,6 +66,7 @@ sudo update-alternatives --set editor /usr/bin/vim.basic
 sudo apt install vim cifs-utils gnome-shell-extension-dashtodock
 
 LANG=C xdg-user-dirs-gtk-update
+
 break;
 ;;
 [Nn]* )
