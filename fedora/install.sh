@@ -11,7 +11,7 @@ which gem > /dev/null || sudo dnf install rubygems
 which bundle > /dev/null || sudo dnf install rubygem-bundler
 bundle install > /dev/null
 which serverkit > /dev/null || sudo gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
-which serverkit > /dev/null ||  gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
+gem install serverkit serverkit-atom serverkit-rbenv serverkit-homebrew
 
 # backup
 cp ~/.bashrc ~/.bashrc.bak
@@ -21,6 +21,8 @@ cp ~/.bashrc ~/.bashrc.bak
 #git clone https://github.com/hiroyuki12/dotfilesv
 cd ~/github/dotfilesv/fedora
 serverkit apply recipe.yml.erb
+
+LANG=C xdg-user-dirs-gtk-update
 
 break;
 ;;
