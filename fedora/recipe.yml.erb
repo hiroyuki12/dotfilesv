@@ -81,17 +81,17 @@ resources:
   - type: command
     script: sudo mkdir /mnt/nas
 
-  - type: command
-    script: git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+#  - type: command
+#    script: git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 
-  - type: command
-    script: mkdir ~/.rbenv/plugins
+#  - type: command
+#    script: mkdir ~/.rbenv/plugins
 
-  - type: command
-    script: git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+#  - type: command
+#    script: git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-  - type: command
-    script: sudo dnf install bzip2 gcc openssl-devel readline-devel zlib-devel perl-FindBin perl-File-Compare
+#  - type: command
+#    script: sudo dnf install bzip2 gcc openssl-devel readline-devel zlib-devel perl-FindBin perl-File-Compare
 #  - type: command
 #    check_script: rpm -q git
 #    script: sudo apt-get install git
@@ -231,7 +231,7 @@ resources:
     destination: github/dotfilesv/.vimrc
   - type: symlink
     source: /home/<%= ENV["USER"] %>/.bashrc
-    destination: github/dotfilesv/.bashrc
+    destination: github/dotfilesv/fedora/.bashrc
   - type: symlink
     source: /home/<%= ENV["USER"] %>/.gitconfig
     destination: github/dotfilesv/.gitconfig
@@ -253,17 +253,4 @@ resources:
  #   notify:
  #     - killall_Terminal
 
-handlers:
-  - id: killall_Finder
-    type: command
-    script: killall Finder
-  - id: killall_Dock
-    type: command
-    script: killall Dock
-  - id: killall_Safari
-    type: command
-    script: killall Safari
-  - id: killall_Terminal
- #   type: command
- #   script: killall Terminal
 
