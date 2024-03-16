@@ -19,7 +19,7 @@ alias ga='git add'
 alias gl='git log'
 alias glp='git log -p'
 
-
+alias df='df -h'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
