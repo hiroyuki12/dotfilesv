@@ -40,8 +40,8 @@ read -p 'Now Initial Setting? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
-sudo cp lightdm_display.sh /etc/lightdm/
-sudo chmod +x /etc/lightdm/lightdm_display.sh
+#sudo cp lightdm_display.sh /etc/lightdm/
+#sudo chmod +x /etc/lightdm/lightdm_display.sh
 
 
 #sudo apt-get update
@@ -60,28 +60,17 @@ done;
 
 
 while true; do
-read -p 'Now Install rbenv & serverkit? [Y/n]' Answer
+read -p 'Now Install serverkit? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
-#install rbenv
-which rbenv > /dev/null
-if [ $? -ne 0 ]; then
-  brew install rbenv
-fi
-
-rbenv --version
-
-source ~/.bashrc
-rbenv install -l
-rbenv install 2.7.3
-rbenv versions
-rbenv global 2.7.3
-ruby -v
-
 # install serverkit
 which bundle > /dev/null || sudo gem install bundler
-bundle install > /dev/null
+#bundle install > /dev/null
+#sudo gem install serverkit serverkit-atom serverkit-homebrew serverkit-rbenv
+#gem install serverkit serverkit-atom serverkit-homebrew serverkit-rbenv
+
+sudo mkdir /mnt/nas
 
 # Run installer (ruby 2.7.3)
 serverkit apply ~/github/dotfilesv/plamo/recipe.yml.erb

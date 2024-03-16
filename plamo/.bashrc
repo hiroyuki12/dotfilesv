@@ -67,6 +67,7 @@ alias bb='get_pkginfo -a'
 alias a='sudo installpkg'
 alias cls='clear'
 
+alias gs='git status'
 alias gd='git diff'
 alias gc='git commit'
 alias gp='git push'
