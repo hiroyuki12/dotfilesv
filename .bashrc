@@ -71,3 +71,5 @@ export PATH="$HOME/bin:$PATH"
 
 # ansible
 export PATH=$PATH:$HOME/.local/bin
+
+setxkbmap -option ctrl:nocaps
