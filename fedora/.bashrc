@@ -5,7 +5,7 @@ alias d='cd ~/github/dotfilesv'
 alias a='sudo dnf install'
 alias sea='dnf search'
 
-alias bb='sudo dnf update'
+alias bb='sudo dnf update -y'
 alias la='ls -A'
 
 alias le='leafpad'
